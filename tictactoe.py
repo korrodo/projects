@@ -18,7 +18,7 @@ class TicTacToe:
         solution = np.argwhere(self.board == entry)
         ##Above is not real code. Shows where the entry is found as argwhere pulls out info
         
-        print(solution[0][0] and solution[0][1])
+        print('hello' + solution)
 
         x = solution[0][0]
         y = solution[0][1]
