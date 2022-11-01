@@ -17,6 +17,10 @@ class TicTacToe:
         entry = input('Player 1 -- Choose your location: ').upper()
         solution = np.argwhere(self.board == entry)
         ##Above is not real code. Shows where the entry is found as argwhere pulls out info
+        
+        if(len(solution) == 0):
+            print('Square is filled.')
+            sys.exit()
 
         x = solution[0][0]
         y = solution[0][1]
@@ -37,7 +41,7 @@ class TicTacToe:
         entry = input('Player 2 -- Choose your location: ').upper()
         
         solution = np.argwhere(self.board == entry)
-        
+
         x = solution[0][0]
         y = solution[0][1]
         
