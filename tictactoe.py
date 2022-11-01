@@ -19,15 +19,11 @@ class TicTacToe:
         ##Above is not real code. Shows where the entry is found as argwhere pulls out info
         
         if(len(solution) == 0):
-            print('Square is filled.')
-            sys.exit()
+            print('This square has been played.')
+            starter.userinput()
 
         x = solution[0][0]
         y = solution[0][1]
-        
-        if(self.board[x][y] == 'X' or self.board[x][y] == 'O'):
-            print('This square has been played.')
-            starter.userinput()
             
         ##Reset input as P1 made a mistake
             
@@ -42,14 +38,12 @@ class TicTacToe:
         
         solution = np.argwhere(self.board == entry)
 
+        if(len(solution) == 0):
+            print('This square has been played.')
+            starter.userinput()
+
         x = solution[0][0]
         y = solution[0][1]
-        
-        if(self.board[x][y] == 'X' or self.board[x][y] == 'O'):
-            print('This square has been played.')
-            starter.userinput2() 
-        
-
             
         self.board[x][y] = 'O'
         if(starter.check() == True):
