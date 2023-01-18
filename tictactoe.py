@@ -40,7 +40,7 @@ class TicTacToe:
 
         if(len(solution) == 0):
             print('This square has been played.')
-            starter.userinput()
+            starter.userinput2()
 
         x = solution[0][0]
         y = solution[0][1]
